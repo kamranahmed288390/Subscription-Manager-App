@@ -118,5 +118,5 @@ list.addEventListener("click", (e) => {
 
 sortInput.addEventListener("change", renderSubs);
 
-// Initial load
+
 renderSubs();
