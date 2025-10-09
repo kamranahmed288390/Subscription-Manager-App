@@ -32,6 +32,6 @@ A simple and elegant web application to help users manage their recurring subscr
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/subscription-manager.git
+git clone https://github.com/kamranahmed288390/subscription-manager.git
 cd subscription-manager
 
