@@ -1,8 +1,6 @@
-
 body {
   background: linear-gradient(to right, #f8fafc, #e0f7fa);
 }
-
 
 @keyframes fadeIn {
   0% {
@@ -15,16 +13,63 @@ body {
   }
 }
 
+@keyframes fadeInSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popupFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out;
 }
 
+.animate-fade-in-slow {
+  animation: fadeInSlow 0.8s ease-out;
+}
+
+.animate-title {
+  animation: fadeIn 0.6s ease-out;
+}
 
 button:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
 }
 
+input, select {
+  background-color: #f9fafb;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #2563eb44;
+}
+
+.subscription-card {
+  transition: all 0.3s ease;
+}
+
+.subscription-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
 
 .fade-out {
   opacity: 0;
@@ -32,20 +77,6 @@ button:hover {
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
-
-input, select {
-  background-color: #f9fafb;
-  transition: border-color 0.2s;
-}
-
-input:focus, select:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 1px #2563eb;
-}
-
-
-.subscription-card:hover {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.06);
-  transform: translateY(-2px);
-  transition: all 0.2s ease;
+#popup {
+  animation: popupFade 0.4s ease-out;
 }
